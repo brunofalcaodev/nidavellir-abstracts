@@ -37,6 +37,4 @@ interface Pollable
      * @return mixed
      */
     public function execute(callable $function);
-
-    public function canExecute();
 }
