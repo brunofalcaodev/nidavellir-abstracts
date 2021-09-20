@@ -4,7 +4,7 @@ namespace Nidavellir\Abstracts\Contracts;
 
 use Nidavellir\Cube\Models\Api;
 
-interface Crawler
+interface Pollable
 {
     /**
      * Connects to the exchange given env or config parameters.
@@ -28,4 +28,15 @@ interface Crawler
      * @return mixed
      */
     public function withApi(Api $api);
+
+    /**
+     * Executes a crawler command in a controllable environment.
+     *
+     * @param  callable $function
+     *
+     * @return mixed
+     */
+    public function execute(callable $function);
+
+    public function canExecute();
 }
