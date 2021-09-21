@@ -6,5 +6,5 @@ interface Validatable
 {
     public function parse();
 
-    public static function validate(string $value);
+    public static function validate(array $dataset);
 }
