@@ -4,7 +4,9 @@ namespace Nidavellir\Abstracts\Contracts;
 
 interface Validatable
 {
+    public function __construct(string $value);
+
     public function parse();
 
-    public static function validate(array $dataset);
+    public function validate();
 }
